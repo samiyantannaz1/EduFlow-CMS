@@ -1,16 +1,84 @@
-# React + Vite
+# Educational Platform CMS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern educational platform built with React and REST APIs that allows users to browse courses, manage articles, and interact with educational content through a responsive user interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Article Management (CRUD)
 
-## React Compiler
+* Create new articles
+* View article details
+* Edit existing articles
+* Delete articles
+* Search articles
+* Sort articles by date and reading time
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Course Management
 
-## Expanding the ESLint configuration
+* Browse courses
+* Search courses
+* Filter courses by category
+* Filter courses by status
+* Sort courses by price and date
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### User Experience
+
+* Responsive Design
+* RTL Support
+* Interactive Sliders
+* Animated UI Sections
+* Pagination System
+* Success/Error Notifications
+
+## Technologies
+
+* React
+* React Router DOM
+* Axios
+* Fetch API
+* Bootstrap RTL
+* CSS Modules
+* Swiper.js
+* React Paginate
+* SweetAlert2
+* AOS Animation
+* Vite
+
+## Technical Concepts
+
+* CRUD Operations
+* REST API Integration
+* Dynamic Routing
+* State Management with React Hooks
+* Component Reusability
+* Search & Filtering Logic
+* Sorting Algorithms
+* Responsive Layout Design
+
+## Installation
+
+```bash
+git clone https://github.com/samiyantannaz1/backend-project.git
+
+cd backend-project
+
+npm install
+
+npm run dev
+```
+
+## Future Improvements
+
+* TypeScript Migration
+* React Query Integration
+* Authentication System (JWT)
+* Global State Management
+* Advanced Error Handling
+* Dashboard Analytics
+
+## Author
+
+Tannaz Samiyan
+
+Frontend Developer (React)
+لهف
