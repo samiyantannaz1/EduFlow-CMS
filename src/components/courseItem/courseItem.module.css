@@ -1,0 +1,150 @@
+/* کارت اصلی: ظرف کلی کارت
+   - تعیین عرض کلی، پس‌زمینه و حاشیه (border)
+   - border-radius برای گوشه‌های گرد
+   - overflow:hidden تا محتوای اضافه بیرون نزنه (بخصوص عکس)
+   - box-shadow برای سایهٔ نرم زیر کارت
+   - transition برای حرکت نرم هنگام hover */
+.courseCardWrapper {
+  width: 100%; /* کارت تمام عرض والد (معمولاً ستون) */
+  background: #fff; /* رنگ پس‌زمینه کارت */
+  border-radius: 12px; /* گرد کردن گوشه‌ها */
+  border: 1px solid #e6e6e6; /* خط ظریف دور کارت */
+  overflow: hidden; /* جلوگیری از بیرون‌زدگی محتوا (مهم برای تصاویر) */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08); /* سایهٔ ملایم برای عمق */
+  transition: all 0.3s ease; /* انیمیشن نرم برای تغییرات (hover و غیره) */
+  display: flex; /* ;   این خط کارت را تبدیل می‌کنه به یک کانتینر فلکس. */
+ flex-direction: column;
+ height: 100% ;/* ;این خط باعث میشه کارت ارتفاع کامل سطر رو پُر کنه */
+
+}
+
+
+/* حالت hover کارت:
+   - جابجایی به بالا (translateY)
+   - افزایش سایه برای نشان دادن "برآمدگی" */
+.courseCardWrapper:hover {
+  transform: translateY(-5px); /* کمی بالا می‌رود */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* سایهٔ قوی‌تر */
+}
+
+/* بخش تصویر:
+   - position:relative چون یک برچسب تعداد دانشجو بصورت absolute بالای تصویر قرار می‌گیرد
+   - ارتفاع ثابت برای یکنواختی کارت‌ها */
+.courseCardImage {
+  position: relative; /* برای قرار دادن عناصر absolute داخلش */
+  width: 100%;
+  height: 180px; /* ارتفاع تعیین شده تصویر */
+  overflow: hidden; /* برش تصویر اگر بزرگتر باشد */
+}
+
+/* خود تگ img داخل بخش تصویر:
+   - object-fit:cover باعث می‌شود تصویر بدون کشیدگی، تمام بخش را پوشش دهد */
+.courseCardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* تصویر را برش می‌دهد تا بدون کشیدگی قاب را پر کند */
+  display: block; /* حذف فاصلهٔ خطی زیر تصویر */
+}
+
+/* نشانگر تعداد دانشجو:
+   - موقعیت absolute در گوشهٔ پایین-راست
+   - پس‌زمینه و رنگ متن برای خوانایی */
+.courseCardImage p {
+  position: absolute;
+  top: 20px;        /* از بالا */
+  left: 1px;       /* از سمت چپ */
+  background: #fff; /* پس‌زمینه سفید */
+  color: #000;      /* متن مشکی */
+  padding: 4px 10px; /* فاصلهٔ داخلی کوچک */
+  border-radius:0 30px 30px 0; /* گرد بودن لبه‌ها شبیه تگ */
+  font-size: 14px; /* اندازهٔ متن */
+  margin: 0; /* حذف margin پیش‌فرض پاراگراف */
+    border: 1px solid #ddd; /* شبیه badge واقعی */
+}
+
+/* محتوای کارت (عنوان + توضیح):
+   - padding برای فاصله از کناره‌ها
+   - رنگ و اندازهٔ پایه متن */
+.courseCardContent {
+  padding: 15px; /* فاصله داخلی کارت */
+  font-size: 15px;
+  color: #444; /* رنگ متن تاریک */
+  line-height: 1.4; /* فاصلهٔ بین خطوط برای خوانایی */
+}
+
+/* سبک عنوان داخل محتوای کارت:
+   - استفاده از تگ <b> در کامپوننت برای عنوان
+   - نمایش بلوکی و فاصلهٔ پایین برای جداسازی از توضیح */
+.courseCardContent b {
+  font-size: 18px; /* عنوان بزرگ‌تر */
+  display: block; /* باعث می‌شود در خط جداگانه بیاید */
+  margin-bottom: 8px; /* فاصله تا توضیحات */
+  color: #222; /* رنگ عنوان کمی تیره‌تر */
+}
+
+/* اگر توضیحات داخل یک <p> باشد:
+   - تنظیم حاشیه‌ها برای هماهنگی */
+.courseCardContent p {
+  margin: 0; /* حذف margin پیش‌فرض */
+  color: #555; /* رنگ توضیح کمی کم‌رنگ‌تر از عنوان */
+}
+
+/* بخش اطلاعات مدرس:
+   - padding افقی برای هماهنگی با محتوای بالا
+   - رنگ خاکستری برای اطلاعات ثانویه */
+.courseCardTeacher {
+  padding: 0 15px 12px 15px; /* padding بالا صفر، پایین 12 برای فاصله تا فوتر */
+  color: #6c757d; /* رنگ متنی شبیه muted bootstrap */
+  font-size: 14px;
+}
+
+/* فوتر کارت (دکمه):
+   - تراز وسطی و فاصله مناسب
+   - می‌توانیم دکمه را در اینجا center کنیم */
+.courseCardFooter {
+  padding: 15px;
+  display: flex;
+  justify-content: center; /* دکمه وسط چین شود */
+
+}
+
+/* استایل دکمه اصلی:
+   - پس‌زمینهٔ primary، بدون border، گوشه‌های نرم
+   - cursor:pointer برای نشان دادن کلیک‌پذیری
+   - transition برای افکت hover */
+.courseCardFooter button {
+  background: #0d6efd; /* رنگ دکمه */
+  border: none; /* حذف border پیش‌فرض */
+  padding: 0 18px; /* فضای داخلی دکمه */
+  border-radius: 8px; /* گوشه‌های دکمه */
+  color: #fff; /* رنگ متن دکمه */
+  cursor: pointer; /* نشانگر کلیک */
+  transition: 0.3s; /* انیمیشن ساده */
+  display: inline-flex; /* برای قرارگیری متن یا آیکون کنار هم */
+  align-items: center; /* تراز عمودی داخل دکمه */
+  gap: 8px; /* فاصله بین آیتم‌های داخل دکمه (مثلاً آیکون و متن) */
+}
+
+/* افکت hover دکمه:
+   - تیره‌تر شدن رنگ پس‌زمینه برای بازخورد کاربری */
+.courseCardFooter button:hover {
+  background: #0b5ed7; /* نسخهٔ تیره‌تر از رنگ دکمه */
+}
+
+.swiper-slide {
+  display: flex !important;
+  height: auto !important;
+}
+
+.swiper-slide > div {
+  width: 100%;
+  height: 100%;
+}
+.courseCardFooter{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 480px) 
+{ .courseCardImage { height: 140px; /* تصویر کوتاه‌تر برای موبایل */ } }

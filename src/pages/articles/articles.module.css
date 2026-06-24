@@ -1,0 +1,62 @@
+.serchSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px;
+    margin-top: 50px !important;
+}
+.serchSection input{
+padding: 10px;
+border: none !important;
+border: 1px solid gray;
+border-radius: 0 5px 5px 0;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.serchSection button{
+    padding: 12px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    background-color: lightslategray;
+}
+.serchSection input:hover{
+    border: none !important;
+   border: 1px solid gray;
+}
+.serchSection input:focus{
+      border: none !important;
+       outline: none !important;
+   border: 1px solid gray;
+}
+.sectionRight{
+    width:22%;
+}
+.sectionLeft{
+    width: 75%;
+
+    display: flex;
+}
+.articleSection{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* حذف خط آبی هنگام کلیک روی آکاردئون */
+/* .accordion-button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+} */
+
+:global(.accordion-button) {
+ outline: none !important;
+ border: none !important;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+ 
+
+
+}
+
+:global(.accordion-button:focus) {
+  box-shadow: none !important;
+  outline: none !important;
+    background-color: rgb(150, 156, 162) !important;
+}

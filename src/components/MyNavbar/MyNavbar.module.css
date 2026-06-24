@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'lalezar';
+    src: url('../../assets/Lalezar-Regular.ttf');
+}
+.navLink {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  display: block;
+}
+.active{
+   font-weight: bold;
+}
+
+
+.dropdownCustom > a {
+  color:black !important;
+  padding:0 12px;
+  text-decoration: none;
+ 
+  display: inline-block; /* هم‌ردیف با NavLink */
+}
+
+.dropdownCustom > a:hover {
+ font-weight: bold !important;
+}
+
+/* زمانی که باز است */
+.dropdownCustom.show > a {
+font-weight: bold !important;
+}
+
+/* منوهای داخل dropdown */
+.dropdown-menu {
+  text-align: right;
+}

@@ -1,0 +1,25 @@
+.cardText button{
+   
+    border: none;
+    margin: 20px 0;
+color: blue;
+background-color: transparent;
+
+}
+.cardText button a{
+text-decoration: none;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card {
+    border: none !important;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: transform 0.3s ease; /* زمان و نوع افکت */
+}
+
+.card:hover {
+  transform: scale(1.03); /* بزرگ شدن کارت هنگام هاور */
+}

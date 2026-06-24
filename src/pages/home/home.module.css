@@ -1,0 +1,28 @@
+:global(.navbar){
+background-color: #E3E3E3 !important;
+margin-bottom: 0 !important;
+}
+/* 
+.parent{
+   background-color: #E3E3E3 !important; 
+} */
+body{
+    box-sizing: border-box;
+}
+
+
+/* mohem */
+.customSwiper{
+ 
+    display: flex !important;
+    flex-direction: column-reverse !important;
+padding-bottom: 10px !important;
+}
+.swiperTopSection{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.sectionTitle{
+    font-family: 'lalezar';
+}
